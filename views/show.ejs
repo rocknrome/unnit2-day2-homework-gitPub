@@ -6,15 +6,35 @@
     <title><%= drink.name %></title>
     <style>
         body {
-            background-color: #85cbe2;
+            font-family: 'Arial', sans-serif;
+            background-color: #e3f2fd;
             color: #333;
+            text-align: center;
         }
         img {
-            max-width: 100%;
-            height: auto;
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
         }
-
+        h2, h3 {
+            margin: 10px 0;
+        }
+        .centered-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #0277bd; /* Button color */
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+        .centered-btn:hover {
+            background-color: #01579b;
+        }
     </style>
+
 </head>
 <body>
     <h1>At foo bar</h1>
