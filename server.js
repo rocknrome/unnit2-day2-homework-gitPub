@@ -8,6 +8,12 @@ const port = 3000;
 const app = express();
 
 //ROUTES
+app.get("/", (req, res) => {
+    res.send('Welcome to the Gitpub App!');
+})
 
 
 //LISTENER
+app.listen(port, (req, res) => {
+    console.log(`I am alive on port ${port}`);
+});
