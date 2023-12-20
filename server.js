@@ -28,9 +28,23 @@ app.get("/drinks", (req, res) => {
 
 
 //Show route
+//original show route
+
+// app.get("/drinks/:id", (req, res) => {
+//     res.send(req.params.id);
+// })
+
+//updated Show route
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id);
-})
+    const id = parseInt(req.params.id);
+    if (id >= 0 && id < drinks.length) {
+        const drink = drinks[id];
+        drink.image += '.png';
+        res.render('show', { drink });
+    } else {
+        res.send("Drink not found");
+    }
+});
 
 
 //LISTENER

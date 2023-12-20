@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= drink.name %></title>
+    <style>
+        body {
+            background-color: #85cbe2;
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>At foo bar</h1>
+    <h2><%= drink.name.charAt(0).toUpperCase() + drink.name.slice(1) %></h2>
+    <img src="<%= drink.image %>.png" alt="Image of <%= drink.name %>">
+    <h3>Price: $<%= drink.price %></h3>
+    <a href="/drinks">Back</a>
+</body>
+</html>
