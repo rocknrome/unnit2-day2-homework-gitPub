@@ -15,6 +15,13 @@
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
-    <!-- More content will go here -->
+
+    <!--Capitalizing first letter of each drink-->
+    <ul>
+        <% drinks.forEach(drink => { %>
+            <% let capitalized = drink.name.charAt(0).toUpperCase() + drink.name.slice(1); %>
+            <li><%= capitalized %></li>
+        <% }); %>
+    </ul>
 </body>
 </html>
