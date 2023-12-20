@@ -4,23 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to gitPub</title>
-
     <style>
         body {
-            background-color: #74cba0;
+            background-color: #52abde;
             color: #333;
         }
     </style>
-
 </head>
 <body>
     <h1>Welcome to gitPub</h1>
-
-    <!--Capitalizing first letter of each drink-->
     <ul>
-        <% drinks.forEach(drink => { %>
+        <% drinks.forEach((drink, index) => { %>
             <% let capitalized = drink.name.charAt(0).toUpperCase() + drink.name.slice(1); %>
-            <li><%= capitalized %></li>
+            <li><a href="/drinks/<%= index %>"><%= capitalized %></a></li>
         <% }); %>
     </ul>
 </body>
