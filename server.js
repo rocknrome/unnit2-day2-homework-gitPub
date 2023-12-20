@@ -27,7 +27,10 @@ app.get("/drinks", (req, res) => {
 })
 
 
-
+//Show route
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id);
+})
 
 
 //LISTENER
